@@ -167,7 +167,7 @@ def main(flowfileFolder, outputPath):
 for i in range(95, 96):
 	print('Video %d' % i)
 	flowfileFolder = '/content/drive/My Drive/PWC-Net/flow/%d' % i
-	outputPath = '/content/drive/My Drive/PWC-Net/flow/%d/flow_video/%d.avi' % (i, i)
+	outputPath = '/content/drive/My Drive/PWC-Net/flow_video/%d.avi' % i
 
 	# flowfileFolder = './flow/%d' % i
 	# outputPath = './flow_video/%d.avi' % i

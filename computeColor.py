@@ -152,21 +152,22 @@ def main(flowfileFolder, outputPath):
 	video = cv2.VideoWriter(outputPath, cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'), 30, (800, 410))
 
 	for i in range(number_files):
-		flowPath = os.path.join(flowfileFolder, 'flow%d.flo' % i)
+		index = i * 3
+		flowPath = os.path.join(flowfileFolder, 'flow%d.flo' % index)
 		flow = readFlowFile.read(flowPath)
 
 		img = computeImg(flow)
 		video.write(img)
 		# cv2.imshow('flow', img)
-		# cv2.waitKey(1)
+		# cv2.waitKey()
 	
 	video.release()
 
 
-for i in range(33, 34):
+for i in range(95, 96):
 	print('Video %d' % i)
-	flowfileFolder = '/content/drive/My Drive/AI city challenge 2019/flow/%d' % i
-	outputPath = '/content/drive/My Drive/AI city challenge 2019/flow_video/%d.avi' % i
+	flowfileFolder = '/content/drive/My Drive/PWC-Net/flow/%d' % i
+	outputPath = '/content/drive/My Drive/PWC-Net/flow/%d/flow_video/%d.avi' % i
 
 	# flowfileFolder = './flow/%d' % i
 	# outputPath = './flow_video/%d.avi' % i

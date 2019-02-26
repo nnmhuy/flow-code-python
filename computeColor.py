@@ -152,7 +152,7 @@ def main(flowfileFolder, outputPath):
 	video = cv2.VideoWriter(outputPath, cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'), 30, (800, 410))
 
 	for i in range(number_files):
-		index = i * 3
+		index = (i + 1) * 3
 		flowPath = os.path.join(flowfileFolder, 'flow%d.flo' % index)
 		flow = readFlowFile.read(flowPath)
 
